@@ -2,10 +2,31 @@ img {
   display: block;
 }
 
-.wrap {
-  background: white;
+.container {
   display: flex;
-  &--loaded {
-    background: pink;
+  justify-content: center;
+  align-items: center;
+  .wrap {
+    background: white;
+    display: flex;
+    flex-flow: column wrap;
+    width:  100%;
+    gap: 10px 16px;
+    @media (min-width:1200px) {
+      max-height: 1124px;
+      max-width: 100vh;
+    }
+    &--loaded {
+      background: pink;
+    }
   }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(0.8); }
+  10% { transform: scale(0.9); }
+  20% { transform: scale(0.8); }
+  30% { transform: scale(1); }
+  50% { transform: scale(0.8); }
+  100% { transform: scale(0.8); }
 }
