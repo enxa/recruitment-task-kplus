@@ -1,0 +1,11 @@
+img {
+  display: block;
+}
+
+.wrap {
+  background: white;
+  display: flex;
+  &--loaded {
+    background: pink;
+  }
+}
